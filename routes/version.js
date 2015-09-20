@@ -23,4 +23,11 @@ router.get('/', function(req,res){
 });
 
 
+//en caso de que den a la pagina version/a se va por aqui
+router.get('/a', function(req,res){
+    console.log('han dado a version/a');
+    res.render('version',null);
+});
+
+
 module.exports = router;
