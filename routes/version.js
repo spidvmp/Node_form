@@ -34,15 +34,21 @@ router.post('/buscar',function(req,res){
     var modulo= req.body.nombremodulo;
     console.log('Es el post',modulo);
 
-    var datosJSON = {'nombre':modulo} ;
+    //busco en el fichero y le paso lo que hay que buscar
+    leeVersionModulo(modulo, function(err,data){
 
-    console.log("envio a render ",datosJSON);
+        res.render('version',{data : data});
 
+
+    });
+
+    /*
     //he de enviar un array, no un JSON, asi que transformo el json en array
-    var arr = [];
-    arr.push(modulo);
+    var arr = [modulo];
+
 
     res.render('version',{data : arr});
+    */
 });
 
 
