@@ -42,13 +42,6 @@ router.post('/buscar',function(req,res){
 
     });
 
-    /*
-    //he de enviar un array, no un JSON, asi que transformo el json en array
-    var arr = [modulo];
-
-
-    res.render('version',{data : arr});
-    */
 });
 
 
